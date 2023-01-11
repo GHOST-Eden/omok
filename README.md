@@ -1,0 +1,2 @@
+# omok
+Omok
