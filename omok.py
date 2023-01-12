@@ -81,7 +81,7 @@ while(count >= N-1*N-1):
 		break
 	mapping = input("좌표를 입력해 주세요 : ")
 	clear() #print("\x1B[H\x1B[J")
-	if "," in mapping:
+	if(("," in mapping) and (mapping.count(',') == 1)):
 		x, y = map(IC, mapping.split(","))
 		if(x != False and y != False):
 			if ck == "false":
