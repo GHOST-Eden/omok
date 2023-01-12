@@ -1,3 +1,6 @@
+import os
+clear = lambda : os.system('cls')
+
 N = 10
 
 #make place
@@ -63,7 +66,7 @@ place[0][0] = "X"
 #---------------
 
 
-print("\x1B[H\x1B[J")
+clear() #print("\x1B[H\x1B[J")
 pp()
 
 #main function
@@ -77,7 +80,7 @@ while(count >= N-1*N-1):
 		print("[ 백돌의 오목으로 종료되었습니다. ]")
 		break
 	mapping = input("좌표를 입력해 주세요 : ")
-	print("\x1B[H\x1B[J")
+	clear() #print("\x1B[H\x1B[J")
 	if "," in mapping:
 		x, y = map(IC, mapping.split(","))
 		if(x != False and y != False):
