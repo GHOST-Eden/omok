@@ -101,3 +101,5 @@ while(count >= N-1*N-1):
 			print("마지막 돌의 위치 : "+"("+str(x)+","+str(y)+")")
 	else:
 		dpt()
+else:
+	print("아쉽지만! 비겼습니다.")
