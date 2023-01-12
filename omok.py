@@ -1,6 +1,8 @@
 N = 10
 
+#make place
 place = [[chr(32) for col in range(N)] for row in range(N)]
+#---------------
 
 #print place
 def pp(): 
@@ -10,8 +12,8 @@ def pp():
 		print()
 #---------------
 
-#don't put this
-def dpt():
+#please re-enter
+def pr():
 	print("[ 다시 입력해주세요. ]\n")
 	pp()
 #---------------
@@ -25,7 +27,7 @@ def IC(n):
 		return False
 #---------------
 
-#오목 체크
+#checking omok
 def ocheck(arr):
 	checkC, returnM = [9675, 9679], ["true1", "true2"]
 	dr, dc = [0,1,1,1], [1,0,1,-1]
@@ -46,7 +48,7 @@ def ocheck(arr):
 	return "false"
 #---------------
 
-#테두리
+#make case
 count1 = 0
 for k in range(0,N):
 	place[0][k] = count1
@@ -60,9 +62,11 @@ for l in range(0,N):
 place[0][0] = "X"
 #---------------
 
+
 print("\x1B[H\x1B[J")
 pp()
 
+#main function
 count = 0
 while(count >= N-1*N-1):
 	ck = ocheck(place)
@@ -94,12 +98,13 @@ while(count >= N-1*N-1):
 					pp()
 					print("마지막 돌의 위치 : "+"("+str(x)+","+str(y)+")")
 			else:
-				dpt()
+				pr()
 				print("마지막 돌의 위치 : "+"("+str(x)+","+str(y)+")")
 		else:
-			dpt()
+			pr()
 			print("마지막 돌의 위치 : "+"("+str(x)+","+str(y)+")")
 	else:
-		dpt()
+		pr()
 else:
 	print("아쉽지만! 비겼습니다.")
+#---------------
