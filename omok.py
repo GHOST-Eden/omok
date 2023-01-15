@@ -79,7 +79,7 @@ while(count >= N-1*N-1):
 	elif ck == "true2":
 		print("[ 백돌의 오목으로 종료되었습니다. ]")
 		break
-	mapping = input("좌표를 입력해 주세요 : ")
+	mapping = input("좌표를 입력해 주세요[ex) n,n] : ")
 	clear() #print("\x1B[H\x1B[J")
 	if(("," in mapping) and (mapping.count(',') == 1)):
 		x, y = map(IC, mapping.split(","))
